@@ -10,6 +10,7 @@ import java.text.MessageFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.time.Clock;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -272,6 +273,44 @@ public class ProductManagement {
         }
         return prod;
     }
+
+    public void dumpData(){
+        try{
+            if(Files.notExists(tempFolder)){
+                Files.createDirectory(tempFolder);
+            }
+            Path tempFile = tempFolder.resolve(MessageFormat.format(config.getString("temp.file"), Instant.now()));
+            try(ObjectOutputStream out = new ObjectOutputStream(
+                    Files.newOutputStream(tempFile, StandardOpenOption.CREATE))){
+                out.writeObject(products);
+                products = new HashMap<>();
+            } catch (IOException e){
+                logger.log(Level.WARNING, "Error Creating Temp File" , e.getMessage());
+            }
+        } catch (IOException e){
+            logger.log(Level.WARNING, "Error Dumping Data", e.getMessage());
+        }
+    }
+
+    public void restoreData(){
+        try{
+            if(Files.notExists(tempFolder)){
+                Files.createDirectory(tempFolder);
+            }
+            Path tempFile = Files.list(tempFolder)
+                    .filter(path -> path.getFileName().toString().endsWith("tmp"))
+                    .findFirst().orElseThrow();
+            try(ObjectInputStream in = new ObjectInputStream(
+                    Files.newInputStream(tempFile, StandardOpenOption.READ))){
+            products = (HashMap)in.readObject();
+            } catch (IOException e) {
+
+            }
+        }catch (Exception e) {
+            logger.log(Level.WARNING, "Error Restoring Data", e.getMessage());
+        }
+    }
+
     public Product findProduct(int id) throws ProductManagerException {
         /*Product result = null;
         for (Product prod : products.keySet()) {
