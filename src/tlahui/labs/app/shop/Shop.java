@@ -10,8 +10,7 @@ public class Shop {
 
 	public static void main(String[] args) {
 
-		ProductManagement pm = new ProductManagement("en-GB");
-		
+		ProductManagement pm = ProductManagement.getInstance();
 
 		pm.parseProduct("D,101,Tea,1.99,0,2022-12-11");
 		pm.parseReview("101,4,Nice hot cup of tea");
@@ -38,9 +37,9 @@ public class Shop {
 		pm.parseReview("103,4,It's good, but I was expecting more chocolate");
 		pm.parseReview("103,5,This cake is perfect");
 
-		pm.printProductReport(101);
-		pm.printProductReport(102);
-		pm.printProductReport(103);
+		pm.printProductReport(101,"en-GB");
+		pm.printProductReport(102,"en-GB");
+		pm.printProductReport(103,"en-GB");
 
 		pm.dumpData();
 		pm.restoreData();
@@ -48,7 +47,7 @@ public class Shop {
 		pm.parseProduct("F,104,Cookie,2.99,0,"+LocalDate.now().toString());
 		pm.parseReview("104,3,Just another cookie");
 		pm.parseReview("104,3,Ok");
-		pm.printProductReport(104);
+		pm.printProductReport(104,"en-GB");
 
 		/*pm.createProd(105, "Hot Chocolate", BigDecimal.valueOf(2.50), Rating.NOT_RATED);
 		pm.reviewProd(105, Rating.FOUR_START, "Not bad at all");
@@ -62,7 +61,9 @@ public class Shop {
 		pm.reviewProd(106, Rating.ONE_START, "I don't get it!");
 		pm.printProductReport(106);*/
 
-		pm.printProducts(p-> p.getPrice().floatValue() < 2, (pr1,pr2) -> pr2.getRating().ordinal() - pr1.getRating().ordinal());
+		pm.printProducts(p-> p.getPrice().floatValue() < 2,
+				(pr1,pr2) -> pr2.getRating().ordinal() - pr1.getRating().ordinal(),
+				"en-GB");
 
 /*		Comparator<Product> ratingSorter = (prod1,prod2) -> prod2.getRating().ordinal() - prod1.getRating().ordinal();
 		Comparator<Product> priceSorter = Comparator.comparing(Product::getPrice);
@@ -70,7 +71,8 @@ public class Shop {
 		pm.printProductReport(ratingSorter.thenComparing(priceSorter));
 		pm.printProductReport(ratingSorter.thenComparing(priceSorter).reversed());*/
 
-		pm.getDiscounts().forEach((rating, discount) -> System.out.println(rating + "\t" + discount));
+		pm.getDiscounts("en-GB")
+				.forEach((rating, discount) -> System.out.println(rating + "\t" + discount));
 		
 //		pm.printProductReport();
 //		Product p3 = pm.createProd(103, "Cake", BigDecimal.valueOf(3.99), Rating.FIVE_START, LocalDate.now().plusDays(2));
