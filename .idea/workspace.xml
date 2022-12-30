@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69ed6399-c7b7-4bd3-907f-338305b8be29" name="Changes" comment="First Commit">
+    <list default="true" id="69ed6399-c7b7-4bd3-907f-338305b8be29" name="Changes" comment="- Remove comments from Shop class&#10;- add csv files">
+      <change afterPath="$PROJECT_DIR$/output_files/data/product101.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/product102.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/product103.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/product104.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/product105.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/product106.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/reviews101.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/reviews102.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/reviews103.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/reviews104.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/reviews105.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/data/reviews106.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/reports/product104report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/reports/product105report.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output_files/reports/product106report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement$ResourceFormatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement$ResourceFormatter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/shop/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/shop/Shop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_files/reports/product101report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output_files/reports/product101report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_files/reports/product102report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output_files/reports/product102report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_files/reports/product103report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output_files/reports/product103report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/data/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/data/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672175849112</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Code has been change to load prod info from csv files">
+      <created>1672386742426</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672386742426</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +140,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="Code has been change to load prod info from csv files" />
+    <MESSAGE value="- Remove comments from Shop class&#10;- add csv files" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Remove comments from Shop class&#10;- add csv files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -147,15 +165,6 @@
           <url>file://$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java</url>
           <line>249</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java</url>
-          <line>10</line>
-          <properties class="tlahui.labs.app.shop.Shop" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
