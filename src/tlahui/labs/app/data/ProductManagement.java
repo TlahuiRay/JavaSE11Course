@@ -9,6 +9,7 @@ import java.nio.file.StandardOpenOption;
 import java.text.MessageFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Clock;
 import java.time.Instant;
 import java.time.LocalDate;
@@ -51,7 +52,7 @@ public class ProductManagement {
     }*/
 
     private ProductManagement() {
-        //loadAllData();
+        loadAllData();
     }
 
 /*    public void changeLocale(String languageTag) {
@@ -213,7 +214,7 @@ public class ProductManagement {
                         .filter(review -> review != null)
                         .collect(Collectors.toList());
             } catch(IOException e) {
-                logger.log(Level.WARNING, "Error Loading Review", e.getMessage());
+                logger.log(Level.WARNING, "Error Loading Review", e);
             }
         }
         return reviews;
@@ -222,11 +223,11 @@ public class ProductManagement {
     private Product loadProducts(Path file) {
         Product prod = null;
         try {
-            prod = parseProduct(Files.lines(dataFolder.resolve(file), Charset.forName("UTF-8"))
+            prod = parseProduct(Files.lines(file, Charset.forName("UTF-8"))
                     .findFirst()
                     .orElseThrow());
         } catch (IOException e ){
-            logger.log(Level.WARNING, "Error Loading Product", e.getMessage());
+            logger.log(Level.WARNING, "Error Loading Product", e);
         }
         return prod;
     }
@@ -247,8 +248,8 @@ public class ProductManagement {
         Review review = null;
         try {
             Object[] values = reviewFormat.parse(text);
-            //review = new Review(Rateable.convert(Integer.parseInt((String)values[0])), (String)values[1]);
-            reviewProd(Integer.parseInt((String) values[0]),Rateable.convert(Integer.parseInt((String)values[1])), (String)values[2]);
+            review = new Review(Rateable.convert(Integer.parseInt((String)values[0])), (String)values[1]);
+            //reviewProd(Integer.parseInt((String) values[0]),Rateable.convert(Integer.parseInt((String)values[1])), (String)values[2]);
         } catch (ParseException | NumberFormatException e) {
             logger.log(Level.WARNING, "Error Parsing Review " + text, e);
         }
@@ -265,13 +266,13 @@ public class ProductManagement {
             Rating rating = Rateable.convert(Integer.parseInt((String)values[4]));
             switch ((String) values[0]) {
                 case "D":
-                    //prod = new Drink(id,name,price,rating);
-                    createProd(id,name,price,rating);
+                    prod = new Drink(id,name,price,rating);
+                    //createProd(id,name,price,rating);
                     break;
                 case "F":
                     LocalDate bestBefore = LocalDate.parse((String) values[5]);
-                    //prod =  new Food(id,name,price,rating, bestBefore);
-                    createProd(id,name,price,rating, bestBefore);
+                    prod =  new Food(id,name,price,rating, bestBefore);
+                    //createProd(id,name,price,rating, bestBefore);
                     break;
             }
         } catch (ParseException |
@@ -287,7 +288,8 @@ public class ProductManagement {
             if(Files.notExists(tempFolder)){
                 Files.createDirectory(tempFolder);
             }
-            Path tempFile = tempFolder.resolve(MessageFormat.format(config.getString("temp.file"), Instant.now()));
+            String timestamp = new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
+            Path tempFile = tempFolder.resolve(MessageFormat.format(config.getString("temp.file"), timestamp));
             try(ObjectOutputStream out = new ObjectOutputStream(
                     Files.newOutputStream(tempFile, StandardOpenOption.CREATE))){
                 out.writeObject(products);
@@ -309,7 +311,7 @@ public class ProductManagement {
                     .filter(path -> path.getFileName().toString().endsWith("tmp"))
                     .findFirst().orElseThrow();
             try(ObjectInputStream in = new ObjectInputStream(
-                    Files.newInputStream(tempFile, StandardOpenOption.READ))){
+                    Files.newInputStream(tempFile, StandardOpenOption.DELETE_ON_CLOSE))){
             products = (HashMap)in.readObject();
             } catch (IOException e) {
 

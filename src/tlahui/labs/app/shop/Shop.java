@@ -12,20 +12,20 @@ public class Shop {
 
 		ProductManagement pm = ProductManagement.getInstance();
 
-		pm.parseProduct("D,101,Tea,1.99,0,2022-12-11");
+/*		pm.parseProduct("D,101,Tea,1.99,0,2000-01-01");
 		pm.parseReview("101,4,Nice hot cup of tea");
 		pm.parseReview("101,5,The Perfect Tea");
 		pm.parseReview("101,4,Fine Tea");
 		pm.parseReview("101,4,Good Tea");
 		pm.parseReview("101,3,Just add some lemon");
 
-		/*pm.createProd(101, "Tea", BigDecimal.valueOf(1.99), Rating.NOT_RATED);
+		*//*pm.createProd(101, "Tea", BigDecimal.valueOf(1.99), Rating.NOT_RATED);
 		pm.reviewProd(101, Rating.FOUR_START, "Nice Hot Cup of Tea");
 		pm.reviewProd(101, Rating.TWO_START, "Rather weak Tea");
 		pm.reviewProd(101, Rating.FOUR_START, "Fine Tea");
 		pm.reviewProd(101, Rating.FOUR_START, "Good Tea");
 		pm.reviewProd(101, Rating.FIVE_START, "The Perfect Tea");
-		pm.reviewProd(101, Rating.THREE_START, "Just add some lemon");*/
+		pm.reviewProd(101, Rating.THREE_START, "Just add some lemon");*//*
 
 		pm.parseProduct("D,102,Coffee,1.75,0,2022-12-11");
 		pm.parseReview("102,3,Coffee was ok");
@@ -35,7 +35,7 @@ public class Shop {
 		pm.parseProduct("F,103,Cake,3.99,0,"+LocalDate.now().plusDays(2).toString());
 		pm.parseReview("103,5,Very nice cake");
 		pm.parseReview("103,4,It's good, but I was expecting more chocolate");
-		pm.parseReview("103,5,This cake is perfect");
+		pm.parseReview("103,5,This cake is perfect");*/
 
 		pm.printProductReport(101,"en-GB");
 		pm.printProductReport(102,"en-GB");
@@ -44,22 +44,23 @@ public class Shop {
 		pm.dumpData();
 		pm.restoreData();
 
-		pm.parseProduct("F,104,Cookie,2.99,0,"+LocalDate.now().toString());
+/*		pm.parseProduct("F,104,Cookie,2.99,0,"+LocalDate.now().toString());
 		pm.parseReview("104,3,Just another cookie");
 		pm.parseReview("104,3,Ok");
-		pm.printProductReport(104,"en-GB");
 
-		/*pm.createProd(105, "Hot Chocolate", BigDecimal.valueOf(2.50), Rating.NOT_RATED);
-		pm.reviewProd(105, Rating.FOUR_START, "Not bad at all");
-		pm.reviewProd(105, Rating.FOUR_START, "Tasty !");
-		pm.printProductReport(105);*/
-		
-		/*pm.createProd(106, "Chocolate", BigDecimal.valueOf(2.00), Rating.NOT_RATED, LocalDate.now().plusDays(3));
-		pm.reviewProd(106, Rating.TWO_START, "Too sweet");
-		pm.reviewProd(106, Rating.THREE_START, "Better then cookie");
-		pm.reviewProd(106, Rating.TWO_START, "Too bitter");
-		pm.reviewProd(106, Rating.ONE_START, "I don't get it!");
-		pm.printProductReport(106);*/
+		pm.parseProduct("D,105,Hot Chocolate,2.5,0,2000-01-01");
+		pm.parseReview("105,4,Not bad at all");
+		pm.parseReview("105,4,Tasty !");
+
+		pm.parseProduct("F,106,Chocolate Cake,2.00,0,"+LocalDate.now().plusDays(3).toString());
+		pm.parseReview("106,2,Too sweet");
+		pm.parseReview("106,3,Better then cookie");
+		pm.parseReview("106,4,Too bitter");
+		pm.parseReview("106,1,I don't get it!");*/
+
+		pm.printProductReport(104,"en-GB");
+		pm.printProductReport(105,"en-GB");
+		pm.printProductReport(106,"en-GB");
 
 		pm.printProducts(p-> p.getPrice().floatValue() < 2,
 				(pr1,pr2) -> pr2.getRating().ordinal() - pr1.getRating().ordinal(),

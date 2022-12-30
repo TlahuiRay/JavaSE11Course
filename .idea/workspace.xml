@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="69ed6399-c7b7-4bd3-907f-338305b8be29" name="Changes" comment="First Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement$ResourceFormatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement$ResourceFormatter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/shop/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/shop/Shop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_files/reports/product101report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output_files/reports/product101report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_files/reports/product102report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output_files/reports/product102report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output_files/reports/product103report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output_files/reports/product103report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/data/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/data/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,13 +135,27 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java</url>
-          <line>166</line>
+          <line>167</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java</url>
-          <line>155</line>
+          <line>156</line>
           <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java</url>
+          <line>249</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java</url>
+          <line>10</line>
+          <properties class="tlahui.labs.app.shop.Shop" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
