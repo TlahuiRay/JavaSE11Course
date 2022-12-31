@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69ed6399-c7b7-4bd3-907f-338305b8be29" name="Changes" comment="- Remove comments from Shop class&#10;- add csv files">
-      <change afterPath="$PROJECT_DIR$/output_files/data/product101.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/product102.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/product103.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/product104.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/product105.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/product106.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/reviews101.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/reviews102.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/reviews103.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/reviews104.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/reviews105.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/data/reviews106.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/reports/product104report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/reports/product105report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output_files/reports/product106report.txt" afterDir="false" />
+    <list default="true" id="69ed6399-c7b7-4bd3-907f-338305b8be29" name="Changes" comment="- ProductManagement class methods have been modified to work with multithreading.&#10;- PrintProduct calls were temporarily disabled">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/shop/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/shop/Shop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement$ResourceFormatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement$ResourceFormatter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/data/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/data/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +129,8 @@
     <MESSAGE value="First Commit" />
     <MESSAGE value="Code has been change to load prod info from csv files" />
     <MESSAGE value="- Remove comments from Shop class&#10;- add csv files" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Remove comments from Shop class&#10;- add csv files" />
+    <MESSAGE value="- ProductManagement class methods have been modified to work with multithreading.&#10;- PrintProduct calls were temporarily disabled" />
+    <option name="LAST_COMMIT_MESSAGE" value="- ProductManagement class methods have been modified to work with multithreading.&#10;- PrintProduct calls were temporarily disabled" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -153,17 +141,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java</url>
-          <line>167</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java</url>
-          <line>156</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java</url>
-          <line>249</line>
+          <line>253</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
