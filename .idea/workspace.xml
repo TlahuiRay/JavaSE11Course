@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="69ed6399-c7b7-4bd3-907f-338305b8be29" name="Changes" comment="- ProductManagement class methods have been modified to work with multithreading.&#10;- PrintProduct calls were temporarily disabled">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement$ResourceFormatter.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement$ResourceFormatter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/ProductManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/data/ProductManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/data/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/data/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/data/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/shop/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/ProductManagement/tlahui/labs/app/shop/Shop.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tlahui/labs/app/shop/Shop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672386742426</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- ProductManagement class methods have been modified to work with multithreading.&#10;- PrintProduct calls were temporarily disabled">
+      <created>1672519053672</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672519053672</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,6 +1,0 @@
-Tea , Price: £1.99 , Rating: Not Rated, Best Before 30/12/22
-Review 5 Stars *****	The Perfect Tea
-Review 4 Stars ****	Nice hot cup of tea
-Review 4 Stars ****	Fine Tea
-Review 4 Stars ****	Good Tea
-Review 3 Stars ***	Just add some lemon
